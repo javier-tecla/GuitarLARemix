@@ -1,8 +1,11 @@
 import {
     Meta,
-    Links
+    Links,
+    Outlet
+    
 } from '@remix-run/react'
-import styles from './styles/index.css'
+import styles from '~/styles/index.css'
+import Header from '~/components/header'
 
 export function meta() {
     return  [ 
@@ -46,19 +49,20 @@ export default function App() {
 
     return(
         <Document>
-            <h1>Hola Mundo</h1>
+            <Outlet/>
         </Document>
     )
 }
 
 function Document({children}) {
-    return (
+    return  (
         <html lang="es">
             <head>
                 <Meta/>
                 <Links/>
             </head>
             <body>
+                <Header/>
                 {children}
             </body>
         </html>

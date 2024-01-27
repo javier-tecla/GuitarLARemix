@@ -1,8 +1,8 @@
+import { getGuitarras } from '~/models/guitarras.server'
 
 export async function loader() {
-  const respuesta = await fetch(`${process.env.API_URL}/api/guitarras?populate=imagen`);
-  const resultado = await respuesta.json()
-  return {}
+  const guitarras = await getGuitarras()
+  return guitarras
 }
 
 function Tienda() {

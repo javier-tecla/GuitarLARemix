@@ -23,6 +23,10 @@ module.exports = {
   // Base config
   extends: ["eslint:recommended"],
 
+  rules: {
+    "no-undef": "off",
+  },
+
   overrides: [
     {
       files: ["**/*.{js,jsx}"],

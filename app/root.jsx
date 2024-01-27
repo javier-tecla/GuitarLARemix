@@ -1,7 +1,9 @@
 import {
     Meta,
     Links,
-    Outlet
+    Outlet,
+    Scripts,
+    LiveReload
     
 } from '@remix-run/react'
 import styles from '~/styles/index.css'
@@ -49,7 +51,7 @@ export default function App() {
 
     return(
         <Document>
-            <Outlet/>
+            <Outlet />
         </Document>
     )
 }
@@ -58,12 +60,14 @@ function Document({children}) {
     return  (
         <html lang="es">
             <head>
-                <Meta/>
-                <Links/>
+                <Meta />
+                <Links />
             </head>
             <body>
-                <Header/>
+                <Header />
                 {children}
+                <Scripts />
+                <LiveReload />
             </body>
         </html>
     )

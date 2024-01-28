@@ -4,10 +4,12 @@ import Guitarra from '~/components/guitarra'
 import styles from '~/styles/guitarras.css'
 
 export function meta() {
-  return {
-    title: 'GuitarLA - Tienda de Guitarras',
-    description: 'GuitarLA - Nuesta colección de guitarras'
-  }
+  return [
+    {
+      title: 'GuitarLA - Tienda de Guitarras',
+      description: 'GuitarLA - Nuesta colección de guitarras'
+    }
+  ] 
 }
 export function links() {
   return [

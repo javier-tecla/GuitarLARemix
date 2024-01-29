@@ -4,7 +4,7 @@ import {
     Outlet,
     Scripts,
     LiveReload
-    
+   
 } from '@remix-run/react'
 import styles from '~/styles/index.css'
 import Header from '~/components/header'
@@ -19,7 +19,6 @@ export function meta() {
         }
     ]
 }
-
 
 export function links() {
     return [
@@ -49,7 +48,6 @@ export function links() {
 
 
 export default function App() {
-
     return(
         <Document>
             <Outlet />
@@ -74,3 +72,4 @@ function Document({children}) {
         </html>
     )
 }
+

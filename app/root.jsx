@@ -10,15 +10,27 @@ import styles from '~/styles/index.css'
 import Header from '~/components/header'
 import Footer from '~/components/footer'
 
-export function meta() {
-    return  [ 
-        {
-            charset: 'utf-8',
-            title: 'GuitarLA - Remix',
-            viewport: 'width=device-width,initial-scale=1'
-        }
-    ]
-}
+export function meta({ error }) {
+ 
+    if (error?.status === 404) {
+ 
+       return [
+ 
+           {
+             title: 'Guitarra no encontrada',
+             description: 'Guitarras, venta de Guitarras, guitarra no encontrada'
+           }
+        ]
+    }
+   
+    return (
+        [
+            { charset: 'utf-8' },
+            { title: 'GuitarLA - remix' },
+            { viewport: 'width=device-width,initial-scale=1' }
+        ]
+    )
+} 
 
 export function links() {
     return [

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useLoaderData, isRouteErrorResponse, useNavigate } from '@remix-run/react'
+import { useLoaderData, isRouteErrorResponse, useNavigate, useOutlet, useOutletContext } from '@remix-run/react'
 import { getGuitarra } from '~/models/guitarras.server'
 import styles from '~/styles/guitarras.css'
 
@@ -67,6 +67,7 @@ export function links() {
 
 function Guitarra() {
 
+  const {agregarCarrito } = useOutletContext()
   const [ cantidad, setCantidad ] = useState(0)
   const guitarra = useLoaderData();
 
@@ -94,8 +95,9 @@ function Guitarra() {
         cantidad
     }
 
-    console.log(guitarraSeleccionada)
+    agregarCarrito(guitarraSeleccionada)
   }
+
 
   return (
     <main className='contenedor guitarra'>

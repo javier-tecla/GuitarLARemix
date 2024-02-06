@@ -41,6 +41,7 @@ function Carrito() {
 
                   <div>
                     <p className='nombre'>{producto.nombre}</p>
+                    <p>Cantidad: {producto.cantidad}</p>
 
                     <p className='precio'>$ <span>{producto.precio}</span></p>
                     <p className='subtotal'>Subtotal: $ <span>{producto.cantidad * producto.precio}</span></p>

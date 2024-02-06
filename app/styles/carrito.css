@@ -25,6 +25,14 @@
 .producto:last-of-type {
     border-bottom: none
 }
+.select {
+    all: unset;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+    width: 100%;
+    padding: .5rem;
+    border-radius: 1rem;
+}
 .producto p {
     margin: 0 0 1rem 0;
 }
@@ -49,3 +57,4 @@
     border-radius: 1rem;
     position: sticky;
     top: 3rem;
+}

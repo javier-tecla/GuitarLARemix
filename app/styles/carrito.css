@@ -44,7 +44,8 @@
     font-weight: 700;
     font-size: 4.2rem;
 }
-.precio {
+.producto .precio {
+    margin-top: 2rem;
     font-weight: 700;
     color: var(--primary);
 }
@@ -58,3 +59,4 @@
     position: sticky;
     top: 3rem;
 }
+

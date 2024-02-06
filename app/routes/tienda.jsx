@@ -5,10 +5,11 @@ import styles from '~/styles/guitarras.css'
 
 export function meta() {
   return [
+    {title: 'GuitarLA - Tienda de Guitarras'},
     {
-      title: 'GuitarLA - Tienda de Guitarras',
-      description: 'GuitarLA - Nuesta colección de guitarras'
-    }
+      name: "description",
+      content: 'GuitarLA - Nuesta colección de guitarras'
+    } 
   ] 
 }
 export function links() {

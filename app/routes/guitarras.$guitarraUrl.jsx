@@ -78,6 +78,25 @@ function Guitarra() {
 
   const descripcionText = descripcion && descripcion[0]?.children[0]?.text || '';
 
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    if(cantidad < 1) {
+      alert('Debes seleccionar una cantidad')
+      return
+    }
+
+    const guitarraSeleccionada = {
+        id: guitarra.data[0].id,
+        imagen: imagenUrl,
+        nombre,
+        precio,
+        cantidad
+    }
+
+    console.log(guitarraSeleccionada)
+  }
+
   return (
     <main className='contenedor guitarra'>
         {/* Verifica si imagenUrl está definido antes de renderizar la imagen */}
@@ -88,7 +107,7 @@ function Guitarra() {
             <p className='texto'>{descripcionText}</p>
             <p className='precio'>{precio}</p>
 
-            <form className='formulario'>
+            <form onSubmit={handleSubmit} className='formulario'>
               <label htmlFor='cantidad'>Cantidad</label>
 
               <select 
@@ -96,7 +115,7 @@ function Guitarra() {
                   id="cantidad"
               
               >
-                <option value="">-- Seleccione --</option>
+                <option value="0">-- Seleccione --</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

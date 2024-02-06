@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useLoaderData, isRouteErrorResponse, useNavigate } from '@remix-run/react'
 import { getGuitarra } from '~/models/guitarras.server'
 import styles from '~/styles/guitarras.css'
@@ -65,6 +66,8 @@ export function links() {
 
 
 function Guitarra() {
+
+  const [ cantidad, setCantidad ] = useState(0)
   const guitarra = useLoaderData();
 
   // Verifica si guitarra.data está definido antes de acceder a sus propiedades
@@ -88,7 +91,11 @@ function Guitarra() {
             <form className='formulario'>
               <label htmlFor='cantidad'>Cantidad</label>
 
-              <select id="cantidad">
+              <select 
+                  onChange={ e => setCantidad(parseInt(e.target.value))}
+                  id="cantidad"
+              
+              >
                 <option value="">-- Seleccione --</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -108,3 +115,4 @@ function Guitarra() {
 }
 
 export default Guitarra;
+

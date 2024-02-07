@@ -1,5 +1,5 @@
 # GuitarraLA-Remix
-https://guitar-la-remix-omega-pink.vercel.app/
+https://guitar-la-remix-javier-tecla.vercel.app/
 
 # Welcome to Remix!
 
